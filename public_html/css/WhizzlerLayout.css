@@ -1,0 +1,180 @@
+/* THIS STYLE SHEET SIZES AND POSITIONS CONTROLS AND CONTAINERS */
+
+/* ENTIRE GUI */
+/* All the visible content divs below are contained
+within this content div */
+#content 
+{
+    position:absolute;
+    text-align:left;
+    left: 10px;
+    top: 10px;
+}
+
+/* NORTH */
+/* The Whizzler header */
+#banner
+{
+    position:absolute;
+    left: 400px;
+    top: 0px;
+    width:800px;
+    height:50px;
+    text-align:center;
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding-top:3px;
+    padding-bottom:3px;
+}
+
+/* WEST */
+/* This div has the controls on the left */
+#settings
+{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:400px;
+}
+
+/* NORTH OF WEST */
+/* Contains Start, Pause, etc. */
+#animation_controls_toolbar
+{
+    margin-top:5px;
+    margin-bottom: 5px;
+    margin-right:5px;
+    margin-left:5px;
+    height:40px;
+}
+
+/* THESE ARE IN THE CENTER OF THE WEST */
+/* We'll arrange controls with text inside little toolbars */
+.toolbar
+{
+    margin-top:5px;
+    margin-bottom: 5px;
+    margin-right:5px;
+    margin-left:5px;
+    height:40px;
+}
+
+/* Text describing controls in a toolbar */
+.toolbar_title
+{
+    position:relative;
+    width:70%;
+    top:5px;
+    margin-bottom: 10px;
+}
+
+/* Control in a toolbar */
+.toolbar_control
+{
+    position:relative;
+    top:-80%;
+    left:60%;
+    width:35%;
+}
+
+.toolbar_value
+{
+    position: relative;
+    left: 190px;
+    top: -35px;
+    float: left;
+    width: 15px
+}
+
+.whizzle_control_value
+{
+    position: relative;
+    left: 143px;
+    top: -23px;
+    float: left;
+    width: 15px
+}
+
+/* For sizing and positioning the jscolor
+control that lets the user change the 
+canvas background color */
+#canvas_background_color
+{
+    position:relative;
+    top:-5px;
+    width:100%;
+}
+
+/* THESE GO IN THE SOUTH OF THE WEST */
+/* The whizzles will be listed together */
+#whizzles
+{
+    margin-top:5px;
+    margin-bottom: 5px;
+    margin-right:5px;
+    margin-left:5px;
+}
+
+/* This toolbar is for the min, max, and remove buttons */
+.buttons_toolbar
+{
+    position:relative;
+    top:-100%;
+    left:70%;
+    width:30%;
+}
+
+/* Each whizzle has these controls */
+.min_button,
+.max_button,
+.remove_button
+{
+    position:relative;
+    top:-40px;
+}
+
+/* Whizzle Toolbar has text & Controls */
+.whizzle_toolbar
+{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    position:relative;
+    width:90%;
+    left:5%;
+    height:40px;
+}
+
+/* Text describing a whizzle control */
+.whizzle_toolbar_title
+{
+    position:relative;
+    width:35%;
+    left:5%;
+    margin-top:5px;
+}
+
+/* Whizzle Controls */
+.whizzle_toolbar_control,
+.whizzle_thickness_slider,
+.whizzle_width_slider,
+.whizzle_height_slider,
+.whizzle_x_slider,
+.whizzle_y_slider,
+.whizzle_vX_slider,
+.whizzle_vY_slider
+{
+    position:relative;
+    top:-55%;
+    left:54%;
+    width:40%;
+}
+
+/* Rendering surface, the div that contains the canvas */
+#renderer
+{
+    position:absolute;
+    top:50px;
+    left:400px;
+}

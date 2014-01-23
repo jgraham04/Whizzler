@@ -1,0 +1,113 @@
+<!-- HOMEPAGE FOR THE WHIZZLER -->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The Whizzler</title>
+        
+        <!-- NOTE THAT ORDER MATTERS. WE HAVE TO PUT API-TYPE STUFF
+        FIRST SO THAT WE CAN REFERENCE IT FROM OUR OWN FILES -->
+        
+        <!-- GOOGLE FONT STYLESHEETS -->
+        <link href='http://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Miniver' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative' rel='stylesheet' type='text/css'>
+        
+        <!-- jQuery STYLESHEET -->
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        
+        <!-- jQuery API -->
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        
+        <!-- jQuery Components API -->
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        
+        <!-- JSColor API -->
+        <script type="text/javascript" src="./js/jscolor/jscolor.js"></script>
+        
+        <!-- THESE ARE OUR STYLE SHEETS, ONE FOR STYLE, ONE FOR PAGE LAYOUT -->
+        <link rel="stylesheet" type="text/css" href="./css/WhizzlerStyle.css" />
+        <link rel="stylesheet" type="text/css" href="./css/WhizzlerLayout.css" />
+        
+        <!-- AND THIS IS OUR JavaScript FILE -->
+        <script src="./js/WhizzlerScript.js"></script>
+     </head>
+    
+    <!-- THE BODY CONTAINS ALL VISIBLE CONTENT -->
+    <body>
+        <!-- THIS IS THE MASTER DIV, CONTAINING ALL OTHER DIVS, WE
+        USE IT TO POSITION AND SIZE THE WHOLE PAGE -->
+        <div id="content">
+            
+            <!-- THIS DIV HAS THE PAGE BANNER, NOTE WE CAN ACCESS THE
+            CONTENT AND STYLE OF DIVS BY THEIR IDs, OR CLASSES IF WE
+            KNOW THE ID OF AN ANCESTOR -->
+            <div id="banner">The Whizzler</div>
+
+            <!-- THIS DIV IS CONTENT ON THE LEFT SIDE OF THE SCREEN
+            AND HAS ALL THE CONTROLS -->
+            <div id="settings">
+                
+                <!-- BUTTONS FOR STARTING, PAUSING, ETC. -->
+                <div id="animation_controls_toolbar">
+                    <button name="Start" onclick="startWhizzles()" onmousemove="hover()">Start</button>   
+                    <button name="Pause" onclick="pauseWhizzles()" onmousemove="hover()">Pause</button>
+                    <button name="Reset" onclick="resetWhizzles()" onmousemove="hover()">Reset</button>
+                    <button name="Add Whizzle" onclick="addWhizzle()" onmousemove="hover()">Add Whizzle</button>
+                </div>
+
+                <!-- AND HERE ARE THE TOOLBARS WITH BIGGER CONTROLS -->
+                
+                <!-- FOR CHANGING THE FPS -->
+                <div id="fps_toolbar" class="toolbar">
+                    <div class="toolbar_title" style="left: 20px;">FPS</div>
+                    <div id="anim_speed_value" class="toolbar_value">30</div>
+                    <div id="anim_speed_slider" class="toolbar_control"></div>
+                    <br />
+                </div>
+                
+                <!-- FOR CHANGING THE CANVAS WIDTH -->
+                <div id="canvas_width" class="toolbar">
+                    <div class="toolbar_title">Canvas Width</div>
+                    <div id="canvas_width_value" class="toolbar_value">800</div>
+                    <div id="canvas_width_slider" class="toolbar_control"></div>
+                    <br />
+                </div>
+                
+                <!-- FOR CHANGING THE CANVAS HEIGHT -->
+                <div id="canvas_height" class="toolbar">
+                    <div class="toolbar_title">Canvas Height</div>
+                    <div id="canvas_height_value" class="toolbar_value">500</div>
+                    <div id="canvas_height_slider" class="toolbar_control"></div>
+                    <br />
+                </div>
+                
+                <!-- AND FOR CHANGING THE CANVAS BACKGROUND COLOR. NOTE
+                THAT WE ARE USING A CUSTOM UI COMPONENT FROM THE JSCOLOR LIB -->
+                <div id="canvas_background" class="toolbar">
+                    <div class="toolbar_title">Background</div>
+                    <div class="toolbar_control">
+                        <input id="canvas_background_color" class="color" value="ffdddd" />
+                    </div>
+                </div>
+                
+                <!-- THIS DIV IS WHERE WE'LL PUT ALL THE WHIZZLE CONTROLS. WE'LL
+                START WITH NONE HERE, AND WILL GRADUALLY ADD THEM AS THE USER LIKES -->
+                <div id="whizzles"></div>
+            </div>
+            
+            <!-- THIS DIV HOLDS THE CANVAS, WHICH WILL RENDER THE APP-->
+            <div id="renderer">
+                <canvas id="whizzler_canvas" width="800" height="500"></canvas>
+            </div>
+        </div>
+
+        <!-- WE'LL EXECUTE THIS CODE AFTER THE ENTIRE PAGE HAS LOADED AND
+        IT WILL SETUP ALL VARIABLES FOR USE. NOTE THAT THE initTheWhizzler
+        METHOD CAN BE FOUND INSIDE WhizzlerScript.js, ALONG WITH ALL THE
+        OTHER FUNCTIONS WE'LL WRITE -->
+        <script>
+            initTheWhizzler();
+        </script>
+    </body>
+</html>

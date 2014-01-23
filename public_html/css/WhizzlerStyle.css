@@ -1,0 +1,93 @@
+/* THIS STYLE SHEET DESCRIBES STYLE ONLY */
+
+/* The Whizzler header */
+#banner
+{
+    color:white;
+    background-color: rgb(193, 31, 36);
+    font-size: 24pt;
+    font-family: 'Sofia', cursive; 
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+/* This will be for all the controls toolbars */
+.toolbar, .whizzle_toolbar, .whizzle_controls_toolbar
+{
+    background-color: white;
+    border: 1px solid;
+    border-color: light-gray;
+    border-radius:5px;
+    text-align: left;
+    box-shadow: 10px 10px 5px #888888;    
+}
+
+/* The left box containing all controls */
+#settings
+{
+    background-color: white;
+    border: 1px solid;
+    border-color: light-gray;
+    border-radius:5px;
+    text-align: left;
+}
+
+/* Title for controls. Note the custom Google font */
+.toolbar_title
+{
+    font-family: 'Miniver', cursive;
+    font-size: 18pt;
+    font-weight:bold;
+    color: black;
+}
+
+/* For the whizzle controls, the font is smaller */
+.whizzle_toolbar_title
+{
+    font-family: 'Miniver', cursive;
+    font-size: 14pt;
+    font-weight:bold;
+    color:black;
+}
+
+/* All buttons will use this style */
+button
+{
+    font-family: 'Miniver', cursive;
+    font-size: 16pt;
+    background-color: #b81900;
+    border-radius:25px;
+    border: 2px solid;
+    border-color:black;
+    color: white;
+}
+
+/* Mouse over color change */
+button:hover
+{
+    background-color: #bbbbbb;
+}
+
+/* Button press color change */
+button:active
+{
+    background-color:red;
+}
+
+/* Render surface */
+#whizzler_canvas
+{
+    background-color: #FFDDDD;
+    border: 1px solid black;
+}
+
+/* This will store all the whizzle controls */
+#whizzles
+{
+    background-color: white;
+    border: 1px solid;
+    border-color: gray;
+    border-radius:5px;
+    text-align: left;
+    box-shadow: 10px 10px 5px #888888;       
+}
